@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Pelanggan</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png" />
+  <link rel="stylesheet" href="../../vendor/owl-carousel/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="../../vendor/owl-carousel/css/owl.theme.default.min.css" />
+  <link href="../../vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet" />
+  <link href="../../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--*******************
+        Preloader start
+    ********************-->
+  <div id="preloader">
+    <div class="sk-three-bounce">
+      <div class="sk-child sk-bounce1"></div>
+      <div class="sk-child sk-bounce2"></div>
+      <div class="sk-child sk-bounce3"></div>
+    </div>
+  </div>
+  <!--*******************
+        Preloader end
+    ********************-->
+
+  <!--**********************************
+        Main wrapper start
+    ***********************************-->
+  <div id="main-wrapper">
+    <!--**********************************
+            Nav header start
+        ***********************************-->
+    <div class="nav-header">
+      <a href="index.html" class="brand-logo">
+        <img class="logo-abbr" src="../../images/logo.png" alt="" />
+        <img class="logo-compact" src="../../images/logo-text.png" alt="" />
+        <img class="brand-title" src="../../images/logo-text.png" alt="" />
+      </a>
+
+      <div class="nav-control">
+        <div class="hamburger">
+          <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+      </div>
+    </div>
+    <!--**********************************
+            Nav header end
+        ***********************************-->
+
+    <!--**********************************
+            Header start
+        ***********************************-->
+    <div class="header">
+      <div class="header-content">
+        <nav class="navbar navbar-expand">
+          <div class="collapse navbar-collapse justify-content-between">
+            <div class="header-left">
+              <div class="search_bar dropdown">
+                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                  <i class="mdi mdi-magnify"></i>
+                </span>
+                <div class="dropdown-menu p-0 m-0">
+                  <form>
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <ul class="navbar-nav header-right">
+              <li class="nav-item dropdown notification_dropdown">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                  <i class="mdi mdi-bell"></i>
+                  <div class="pulse-css"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <ul class="list-unstyled">
+                    <li class="media dropdown-item">
+                      <span class="success"><i class="ti-image"></i></span>
+                      <div class="media-body">
+                        <a href="#">
+                          <p>
+                            <strong> James.</strong> has added a<strong>customer</strong>
+                            Successfully
+                          </p>
+                        </a>
+                      </div>
+                      <span class="notify-time">3:20 am</span>
+                    </li>
+                  </ul>
+                  <a class="all-notification" href="#">lihat semua notifikasi <i class="ti-arrow-right"></i></a>
+                </div>
+              </li>
+              <li class="nav-item dropdown header-profile">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                  <i class="mdi mdi-account"></i>
+                  <!-- <span class="progress-text">Muhammad Faisal</span> -->
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="./app-profile.html" class="dropdown-item">
+                    <i class="icon-user"></i>
+                    <span class="ml-2">Profil </span>
+                  </a>
+                  <a href="./email-inbox.html" class="dropdown-item">
+                    <i class="icon-envelope-open"></i>
+                    <span class="ml-2">Kotak masuk </span>
+                  </a>
+                  <a href="./page-login.html" class="dropdown-item" data-toggle="modal" data-target="#modalKeluar">
+                    <i class="icon-key"></i>
+                    <span class="ml-2">Keluar </span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+    <!--**********************************
+            Sidebar start
+        ***********************************-->
+    <div class="quixnav">
+      <div class="quixnav-scroll">
+        <ul class="metismenu" id="menu">
+          <li class="nav-label first">Main Menu</li>
+          <li>
+            <a href="./index.html" aria-expanded="false"><i class="icon icon-app-store"></i><span
+                class="nav-text">Dashboard</span></a>
+          </li>
+          <li>
+            <a href="./profile.html" aria-expanded=""><i class="icon icon-single-04"></i>
+              <span class="nav-text">Profil</span>
+            </a>
+          </li>
+          <li>
+            <a href="./data-mitra.html" aria-expanded=""><i class="icon icon-single-copy-06"></i><span
+                class="nav-text">Data</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+    <!--**********************************
+            Content body start
+        ***********************************-->
+    <div class="content-body">
+      <!-- row -->
+      <div class="container-fluid">
+        <div class="row page-titles mx-0">
+          <div class="col-sm-6 p-md-0">
+            <div class="welcome-text">
+              <h4>Data Order yang Masuk</h4>
+            </div>
+          </div>
+          <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Data</a>
+              </li>
+              <li class="breadcrumb-item active">
+                <a href="javascript:void(0)">Data Orderan</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div class="text-center">
+                    <h4 class="mb-0">
+                      <a href="./data-mitra.html">Data Mitra</a>
+                    </h4>
+                  </div>
+
+                  <div class="text-center">
+                    <h4 class="mb-0">
+                      <a href="./data-pelanggan.html">Data Pelanggan</a>
+                    </h4>
+                  </div>
+
+                  <div class="text-center">
+                    <h4 class="mb-0">
+                      <a href="./data-order.html">Data Orderan</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Order yang masuk</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th>ID Order</th>
+                        <th>Status</th>
+                        <th>Alamat</th>
+                        <th>Petshop</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01-YK</td>
+                        <td>Lunas</td>
+                        <td><span>Kota Solo</span></td>
+                        <td><span>Noni Petshop</span></td>
+                        <td><span>10 Januari 2023</span></td>
+                        <td>
+                          <span>
+                            <button class="btn btn-success text-white" data-toggle="modal"
+                              data-target="#exampleModalCenter">
+                              Detail
+                            </button>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #### MODAL #### -->
+    <div class="modal fade" id="exampleModalCenter">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center">Detail Orderan Noni Petshop</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <h4>ID Order: <span>YK-01</span></h4>
+              </div>
+              <div class="col">
+                <h6 class="text-right">Tanggal Order : <span>10 Januari 2023</span></h6>
+
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <h6>Nama Barang</h6>
+                <p>Pasir Kucing</p>
+                <p>Wishcas</p>
+                <p>Wishcas</p>
+              </div>
+              <div class="col">
+                <h6>Jenis</h6>
+                <p>3 kg</p>
+                <p>1 kg</p>
+                <p>500 gr</p>
+              </div>
+              <div class="col">
+                <h6>Jumlah</h6>
+                <p>20 bks</p>
+                <p>50 bks</p>
+                <p>50 bks</p>
+              </div>
+              <div class="col">
+                <h6>Harga</h6>
+                <p>3.500.000</p>
+                <p>2.000.000</p>
+                <p>500.000</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h5>Status: <span>Lunas</span></h5>
+                <p>Total: Rp. 6.000.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success text-white" data-dismiss="modal">
+              Tutup Detail Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+  <!-- Modal Keluar -->
+  <div class="modal fade" id="modalKeluar">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="p-5">
+            <h4 class="text-center">Apakah anda yakin ingin keluar?</h4>
+            <a href="" class="btn btn-large btn-block my-3">Batal</a>
+            <a href="" class="btn btn-large btn-primary btn-block">Keluar</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal End -->
+
+  <!--**********************************
+        Scripts
+    ***********************************-->
+  <!-- Required vendors -->
+  <script src="../../vendor/global/global.min.js"></script>
+  <script src="../../js/quixnav-init.js"></script>
+  <script src="../../js/custom.min.js"></script>
+
+  <!-- Vectormap -->
+  <!-- <script src="../../vendor/raphael/raphael.min.js"></script>
+  <script src="../../vendor/morris/morris.min.js"></script> -->
+
+  <script src="../../vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="../../vendor/chart.js/Chart.bundle.min.js"></script>
+
+  <script src="../../vendor/gaugeJS/dist/gauge.min.js"></script>
+
+  <!--  flot-chart js -->
+  <script src="../../vendor/flot/jquery.flot.js"></script>
+  <script src="../../vendor/flot/jquery.flot.resize.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="../../vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+  <!-- Counter Up -->
+  <script src="../../vendor/jqvmap/js/jquery.vmap.min.js"></script>
+  <script src="../../vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+  <script src="../../vendor/jquery.counterup/jquery.counterup.min.js"></script>
+
+  <!-- edit grafik pengguna di sini -->
+  <!-- <script src="../../js/dashboard/dashboard-1.js"></script> -->
+</body>
+
+</html>
